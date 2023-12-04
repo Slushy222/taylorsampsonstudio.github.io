@@ -104,3 +104,14 @@ article {
     font-size: 14px;
     font-style: italic;
 }
+
+@media screen and (min-width: 1500px) {
+    img {
+        margin-top: 60px;
+        margin-left: 400px;
+    }
+    article {
+        right: 500px;
+        top: 350px;
+    }
+}
