@@ -446,3 +446,9 @@ a:visited {
 #popup-title7 {
     margin-top: 1500px;
 }
+
+@media screen and (min-width: 1500px) {
+    #projectHead {
+        right: 650px;
+    }
+}
