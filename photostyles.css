@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POPUP */
+.fieldWorkOverlay,
+.accordionOverlay,
+.photo2FieldOverlay,
+.studioOverlay,
+.collageOverlay,
+.selfOverlay {
+  position: relative;
+  display: flex; /* Set a default display */
+  /* Other styles for the overlay */
+}
+
+.fieldWorkOverlay:not(.active),
+.accordionOverlay:not(.active),
+.photo2FieldOverlay:not(.active),
+.studioOverlay:not(.active),
+.collageOverlay:not(.active),
+.selfOverlay:not(.active) {
+  display: none;
+}
+
+.fieldWorkOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 2900px;
+    background-color: white;
+}
+
+.accordionOverlay.active .popup-content {
+    position: relative;
+    margin-top: 1000px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 4600px;
+    background-color: white;
+}
+
+.photo2FieldOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 3800px;
+    background-color: white;
+}
+
+.studioOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 4200px;
+    background-color: white;
+}
+
+.collageOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 4800px;
+    background-color: white;
+}
+
+.selfOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 2500px;
+    background-color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.color-transition {
+    transition: background-color 0.6s ease; /* Adjust the duration and easing function as needed */
+}
+
+/* POSITIONING */
+#masthead {
+    width: 25%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+
+#navBar {
+    width: 100%;
+    height: 140px;
+    position: sticky;
+    top: 0; 
+    background-color: white;
+    z-index: 100;
+    transition: background-color 0.6s ease;
+}
+
+#field1 {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+   
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+#accordion1 {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#field2 {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#studiowork {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#collagework {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#selfproject {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.mainContentImages {
+    position: relative;
+}
+  
+.mainContentImages::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    mix-blend-mode: lighten; /* Set the blend mode to lighten */
+    opacity: 0; /* Initially make it transparent */
+    transition: opacity 0.3s ease;
+}
+
+/* Increase opacity on hover to make the image lighter */
+.mainContentImages:hover {
+    opacity: 0.7; /* Adjust the opacity for desired brightness */
+    transition: opacity 0.3s ease;
+}
+
+/* Increase opacity on hover to make the image lighter */
+.mainContentImages:hover {
+    opacity: 0.7; /* Adjust the opacity for desired brightness */
+}
+
+/* Transition back to normal state when leaving hover */
+.mainContentImages {
+    opacity: 1; /* Set opacity to fully transparent */
+    transition: opacity 0.3s ease; /* Apply transition for opacity */
+}
+
+/* TYPE */
+#projectHead {
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    position: absolute;
+    right: 450px;
+}
+
+#popup-title1, #popup-title2, #popup-title3, #popup-title4, #popup-title5, #popup-title6 {
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    padding-top: 35px;
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
+
+.project-statement {
+    width: 450px;
+    height: auto;
+    margin-left: 100px;
+}
+
+h2 {
+    font-family: "interstate", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: "interstate", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+}
+
+#projectSpace {
+    padding-bottom: 250px;
+}
+
+ul {
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+}
+
+li {
+    position: relative;
+    display: inline;
+    text-align: left;
+    margin: 0px 20px;
+    float: right;
+    top: -75px;
+    right: 200px;
+    padding-bottom: 10px;
+}
+
+#current-page {
+    border-bottom: 2px solid black;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* POPUP IMAGES */
+
+.returnImages, .studioImages, .accordionImages {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.collageImages {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.field2Images {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.selfImages {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+    margin-bottom: 120px;
+}
+
+#popup-title1 {
+    margin-top: 840px;
+}
+
+#popup-title4 {
+    margin-top: 1500px;
+}
+
+#popup-title2 {
+    margin-top: 1300px
+}
+
+#popup-title5 {
+    margin-top: 1800px
+}
+
+#popup-title3 {
+    margin-top: 1300px
+}
+
+#popup-title6 {
+    margin-top: 650px;
+}

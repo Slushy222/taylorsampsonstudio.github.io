@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POPUP */
+.neonOverlay,
+.lamentOverlay,
+.speakOverlay,
+.voteOverlay,
+.roomOverlay,
+.animaOverlay,
+.uniOverlay {
+  position: relative;
+  display: flex; /* Set a default display */
+  /* Other styles for the overlay */
+}
+
+.neonOverlay:not(.active),
+.lamentOverlay:not(.active),
+.speakOverlay:not(.active),
+.voteOverlay:not(.active),
+.roomOverlay:not(.active),
+.animaOverlay:not(.active),
+.uniOverlay:not(.active) {
+  display: none;
+}
+
+.neonOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 2000px;
+    background-color: white;
+}
+
+.lamentOverlay.active .popup-content {
+    position: relative;
+    margin-top: 1000px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 1900px;
+    background-color: white;
+}
+
+.speakOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 2700px;
+    background-color: white;
+}
+
+.voteOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 5300px;
+    background-color: white;
+}
+
+.roomOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 1900px;
+    background-color: white;
+}
+
+.animaOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 1400px;
+    background-color: white;
+}
+
+.uniOverlay.active .popup-content {
+    position: relative;
+    margin-top: 600px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 100%;
+    width: 900px;
+    height: 4200px;
+    background-color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.color-transition {
+    transition: background-color 0.6s ease; /* Adjust the duration and easing function as needed */
+}
+
+/* POSITIONING */
+#masthead {
+    width: 25%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+
+#navBar {
+    width: 100%;
+    height: 140px;
+    position: sticky;
+    top: 0; 
+    background-color: white;
+    z-index: 100;
+    transition: background-color 0.6s ease;
+}
+
+#neon1 {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+   
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+video {
+    margin-top: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 150px;
+
+}
+
+
+#lament2 {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#speak3 {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#voted4 {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#room5 {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#anima6 {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#uni7 {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-top: 100px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.mainContentImages {
+    position: relative;
+}
+  
+.mainContentImages::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    mix-blend-mode: lighten; /* Set the blend mode to lighten */
+    opacity: 0; /* Initially make it transparent */
+    transition: opacity 0.3s ease;
+}
+
+/* Increase opacity on hover to make the image lighter */
+.mainContentImages:hover {
+    opacity: 0.7; /* Adjust the opacity for desired brightness */
+    transition: opacity 0.3s ease;
+}
+
+/* Increase opacity on hover to make the image lighter */
+.mainContentImages:hover {
+    opacity: 0.7; /* Adjust the opacity for desired brightness */
+}
+
+/* Transition back to normal state when leaving hover */
+.mainContentImages {
+    opacity: 1; /* Set opacity to fully transparent */
+    transition: opacity 0.3s ease; /* Apply transition for opacity */
+}
+
+/* TYPE */
+#projectHead {
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    position: absolute;
+    right: 450px;
+}
+
+#popup-title1, #popup-title2, #popup-title3, #popup-title4, #popup-title5, #popup-title6, #popup-title7 {
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    padding-top: 35px;
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
+
+.project-statement {
+    width: 450px;
+    height: auto;
+    margin-left: 100px;
+}
+
+h2 {
+    font-family: "interstate", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: "interstate", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+}
+
+#projectSpace {
+    padding-bottom: 250px;
+}
+
+ul {
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+}
+
+li {
+    position: relative;
+    display: inline;
+    text-align: left;
+    margin: 0px 20px;
+    float: right;
+    top: -75px;
+    right: 200px;
+    padding-bottom: 10px;
+}
+
+#current-page {
+    border-bottom: 2px solid black;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* POPUP IMAGES */
+
+.graveyardImages {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.speakImages {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.lamentImages {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.votedImages {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.roomImages {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.animaImages {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+    margin-bottom: 120px;
+}
+
+.uniImages {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    position: inherit;
+   
+    margin-right: auto;
+    margin-left: 100px;
+    margin-bottom: 120px;
+}
+
+#popup-title1 {
+    margin-top: 400px;
+}
+
+#popup-title2 {
+    margin-top: 20px;
+}
+
+#popup-title3 {
+    margin-top: 750px
+}
+
+#popup-title4 {
+    margin-top: 2050px
+}
+
+#popup-title5 {
+    margin-top: 360px
+}
+
+#popup-title6 {
+    margin-top: 100px;
+}
+
+#popup-title7 {
+    margin-top: 1500px;
+}
